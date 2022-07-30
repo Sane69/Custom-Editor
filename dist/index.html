@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="css/style.min.css">
+  <title>Custom Editor</title>
+</head>
+<body>
+
+  <div class="wrapper">
+    <div class="container">
+      <div class="box">
+        <h1 class="box__title">Custom Editor</h1>
+        <div class="box__content">
+          <div class="box__filter filter disable">
+            <span class="filter__title">Filter</span>
+            <div class="filter__items">
+              <button class="filter__item active" id="brightness">Brightness</button>
+              <button class="filter__item" id="saturation">Saturation</button>
+              <button class="filter__item" id="inversion">Inversion</button>
+              <button class="filter__item" id="grayscale">Grayscale</button>
+            </div>
+            <div class="filter__result">
+              <label class="filter__label" for="filter"></label>
+              <span class="filter__result-span">0%</span>
+            </div>
+            <input class="filter__range" max="200" type="range" name="filter" value="0">
+            <div class="filter__rotate">
+              <button type="button" id="left"><i class="fa-solid fa-rotate-left"></i></button>
+              <button type="button" id="right"><i class="fa-solid fa-rotate-right"></i></button>
+              <button type="button" id="vertical"><i class="fa-solid fa-grip-lines-vertical"></i></button>
+              <button type="button" id="horizontal"><i class="fa-solid fa-grip-lines"></i></button>
+            </div>
+            <div class="filter__reset">
+              <button class="filter__reset-btn">Reset Filters</button>
+            </div>
+          </div>
+          <div class="box__result result">
+            <div class="result__image">
+              <input class="load__input" type="file" accept="image/*" hidden>
+              <img class="result__image-preview" src="./images/upload.png" alt="img">
+            </div>
+            <div class="result__btn">
+              <button class="result__choose" type="button">Choose image</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <script src="js/main.min.js" ></script>
+</body>
+</html>
